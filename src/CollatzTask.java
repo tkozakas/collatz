@@ -15,6 +15,7 @@ public class CollatzTask implements Runnable {
 
     @Override
     public void run() {
+        long startTime = System.currentTimeMillis();
         if (mode.equals("debug")) {
             System.out.println("Starting task in debug mode for range: " + startRange + " to " + endRange);
             try {
@@ -35,8 +36,12 @@ public class CollatzTask implements Runnable {
             }
         }
 
+        long endTime = System.currentTimeMillis(); // End timing
+        long taskDuration = endTime - startTime; // Calculate duration
+
         if ("debug".equals(mode)) {
-            System.out.println("Task for range: " + startRange + " to " + endRange + " finished. Max length: " + maxLength + " for number: " + maxLengthNumber);
+            System.out.println("Task for range: " + startRange + " to " + endRange + " finished. Max length: " +
+                    maxLength + " for number: " + maxLengthNumber + ". Time taken: " + taskDuration + " ms");
         }
     }
 
