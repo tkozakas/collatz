@@ -1,0 +1,81 @@
+Operating in DEBUG mode.
+Testing with 1 threads.
+Starting task in debug mode for range: 1 to 1000000
+Task for range: 1 to 1000000 finished. Max length: 525 for number: 837799. Time taken: 1700 ms
+Calculation with 1 threads took: 1720 ms
+
+Operating in DEBUG mode.
+Testing with 2 threads.
+Starting task in debug mode for range: 1 to 500000
+Starting task in debug mode for range: 500001 to 1000000
+Task for range: 1 to 500000 finished. Max length: 449 for number: 410011. Time taken: 1310 ms
+Task for range: 500001 to 1000000 finished. Max length: 525 for number: 837799. Time taken: 1610 ms
+Calculation with 2 threads took: 1613 ms
+
+Operating in DEBUG mode.
+Testing with 4 threads.
+Starting task in debug mode for range: 1 to 250000
+Starting task in debug mode for range: 500001 to 750000
+Starting task in debug mode for range: 750001 to 1000000
+Starting task in debug mode for range: 250001 to 500000
+Task for range: 1 to 250000 finished. Max length: 443 for number: 230631. Time taken: 1261 ms
+Task for range: 250001 to 500000 finished. Max length: 449 for number: 410011. Time taken: 1427 ms
+Task for range: 500001 to 750000 finished. Max length: 509 for number: 626331. Time taken: 1445 ms
+Task for range: 750001 to 1000000 finished. Max length: 525 for number: 837799. Time taken: 1468 ms
+Calculation with 4 threads took: 1472 ms
+
+Operating in DEBUG mode.
+Testing with 8 threads.
+Starting task in debug mode for range: 1 to 125000
+Starting task in debug mode for range: 125001 to 250000
+Starting task in debug mode for range: 500001 to 625000
+Starting task in debug mode for range: 750001 to 875000
+Starting task in debug mode for range: 625001 to 750000
+Starting task in debug mode for range: 375001 to 500000
+Starting task in debug mode for range: 875001 to 1000000
+Starting task in debug mode for range: 250001 to 375000
+Task for range: 1 to 125000 finished. Max length: 354 for number: 106239. Time taken: 1451 ms
+Task for range: 125001 to 250000 finished. Max length: 443 for number: 230631. Time taken: 1495 ms
+Task for range: 250001 to 375000 finished. Max length: 441 for number: 345947. Time taken: 1495 ms
+Task for range: 375001 to 500000 finished. Max length: 449 for number: 410011. Time taken: 1538 ms
+Task for range: 500001 to 625000 finished. Max length: 470 for number: 511935. Time taken: 1630 ms
+Task for range: 625001 to 750000 finished. Max length: 509 for number: 626331. Time taken: 1655 ms
+Task for range: 750001 to 875000 finished. Max length: 525 for number: 837799. Time taken: 1662 ms
+Task for range: 875001 to 1000000 finished. Max length: 507 for number: 939497. Time taken: 1667 ms
+Calculation with 8 threads took: 1673 ms
+
+Operating in DEBUG mode.
+Testing with 16 threads.
+Starting task in debug mode for range: 62501 to 125000
+Starting task in debug mode for range: 250001 to 312500
+Starting task in debug mode for range: 312501 to 375000
+Starting task in debug mode for range: 937501 to 1000000
+Starting task in debug mode for range: 500001 to 562500
+Starting task in debug mode for range: 812501 to 875000
+Starting task in debug mode for range: 875001 to 937500
+Starting task in debug mode for range: 125001 to 187500
+Starting task in debug mode for range: 375001 to 437500
+Starting task in debug mode for range: 437501 to 500000
+Starting task in debug mode for range: 687501 to 750000
+Starting task in debug mode for range: 625001 to 687500
+Starting task in debug mode for range: 187501 to 250000
+Starting task in debug mode for range: 1 to 62500
+Starting task in debug mode for range: 562501 to 625000
+Starting task in debug mode for range: 750001 to 812500
+Task for range: 1 to 62500 finished. Max length: 340 for number: 52527. Time taken: 1457 ms
+Task for range: 125001 to 187500 finished. Max length: 383 for number: 156159. Time taken: 1579 ms
+Task for range: 187501 to 250000 finished. Max length: 443 for number: 230631. Time taken: 1571 ms
+Task for range: 62501 to 125000 finished. Max length: 354 for number: 106239. Time taken: 1508 ms
+Task for range: 250001 to 312500 finished. Max length: 407 for number: 263103. Time taken: 1663 ms
+Task for range: 312501 to 375000 finished. Max length: 441 for number: 345947. Time taken: 1671 ms
+Task for range: 625001 to 687500 finished. Max length: 509 for number: 626331. Time taken: 1668 ms
+Task for range: 437501 to 500000 finished. Max length: 444 for number: 461262. Time taken: 1707 ms
+Task for range: 375001 to 437500 finished. Max length: 449 for number: 410011. Time taken: 1717 ms
+Task for range: 750001 to 812500 finished. Max length: 468 for number: 767903. Time taken: 1709 ms
+Task for range: 687501 to 750000 finished. Max length: 504 for number: 704623. Time taken: 1773 ms
+Task for range: 562501 to 625000 finished. Max length: 447 for number: 615017. Time taken: 1782 ms
+Task for range: 500001 to 562500 finished. Max length: 470 for number: 511935. Time taken: 1790 ms
+Task for range: 812501 to 875000 finished. Max length: 525 for number: 837799. Time taken: 1773 ms
+Task for range: 875001 to 937500 finished. Max length: 476 for number: 910107. Time taken: 1771 ms
+Task for range: 937501 to 1000000 finished. Max length: 507 for number: 939497. Time taken: 1786 ms
+Calculation with 16 threads took: 1811 ms
