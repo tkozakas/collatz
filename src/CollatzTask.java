@@ -5,7 +5,7 @@ public class CollatzTask implements Runnable {
     private final long startRange;
     private final long endRange;
     private final String mode;
-    // allows multiple threads to read and write concurrently
+    // allows multiple threads to read and write concurrently without interfering with each other
     private static final Map<Long, Integer> cache = new ConcurrentHashMap<>();
 
     public CollatzTask(long startRange, long endRange, String mode) {
