@@ -5,6 +5,7 @@ public class CollatzTask implements Runnable {
     private final long startRange;
     private final long endRange;
     private final String mode;
+    // allows multiple threads to read and write concurrently
     private static final Map<Long, Integer> cache = new ConcurrentHashMap<>();
 
     public CollatzTask(long startRange, long endRange, String mode) {
@@ -46,8 +47,12 @@ public class CollatzTask implements Runnable {
     }
 
     private int calculateCollatzLength(long n) {
-        if (n == 1) return 1;
-        if (cache.containsKey(n)) return cache.get(n);
+        if (n == 1) {
+            return 1;
+        }
+        if (cache.containsKey(n)) {
+            return cache.get(n);
+        }
 
         long next = n % 2 == 0 ? n / 2 : 3 * n + 1;
         int length = 1 + calculateCollatzLength(next);
