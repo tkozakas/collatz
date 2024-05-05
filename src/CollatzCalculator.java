@@ -37,7 +37,12 @@ public class CollatzCalculator implements Runnable {
         long currentStart = startRange;
 
         for (int i = 0; i < threadsCount; i++) {
-            long currentEnd = (i == threadsCount - 1) ? endRange : currentStart + intervalLength - 1;
+            long currentEnd;
+            if (i == threadsCount - 1) {
+                currentEnd = endRange;
+            } else {
+                currentEnd = currentStart + intervalLength - 1;
+            }
             executor.execute(new CollatzTask(currentStart, currentEnd, mode));
             currentStart = currentEnd + 1;
         }
