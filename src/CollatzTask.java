@@ -43,9 +43,7 @@ public class CollatzTask implements Runnable {
 
     private int calculateCollatzLength(long n) {
         if (n == 1) return 1;
-
         long next = n % 2 == 0 ? n / 2 : 3 * n + 1;
-
         return 1 + calculateCollatzLength(next);
     }
 }
