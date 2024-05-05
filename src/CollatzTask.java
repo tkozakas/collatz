@@ -5,7 +5,7 @@ public class CollatzTask implements Runnable {
     private final long startRange;
     private final long endRange;
     private final String mode;
-    private static final Map<Long, Integer> cache = new ConcurrentHashMap<>(10000000);
+    private static final Map<Long, Integer> cache = new ConcurrentHashMap<>();
 
     public CollatzTask(long startRange, long endRange, String mode) {
         this.startRange = startRange;
