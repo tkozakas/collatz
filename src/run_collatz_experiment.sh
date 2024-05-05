@@ -1,30 +1,22 @@
 #!/bin/bash
-#SBATCH --output=collatz_%j.out
-#SBATCH --error=collatz_%j.err
 
-run_experiment() {
-  local start=$1
-  local end=$2
-  local debug_mode=$3
-  local threads=$4
+if [ "$#" -ne 4 ]; then
+    echo "Usage: ./run_collatz_experiment.sh <cores> <mode> <start> <end>"
+    exit 1
+fi
 
-  echo "Running experiment from $start to $end with $threads thread(s) in $debug_mode mode."
-  java Main $start $end $debug_mode $threads
-}
+CORES=$1
+MODE=$2
+START=$3
+END=$4
 
-DEBUG_MODE=debug
-START=1
+mkdir -p output
 
-# Nuo 1 to 10 mln
-END1=10000000
 for THREADS in 1 2 4 8 16 32; do
-  sbatch -c $THREADS run_collatz_experiment.sh
-  run_experiment $START $END1 $DEBUG_MODE $THREADS
-done
+  JOB_NAME="c${CORES}_t${THREADS}"
+  OUTPUT_FILE="output/collatz_c${CORES}_t${THREADS}.out"
 
-# Nuo 1 to 1 bln
-END2=1000000000
-for THREADS in 1 2 4 8 16 32; do
-  sbatch -c $THREADS run_collatz_experiment.sh
-  run_experiment $START $END2 $DEBUG_MODE $THREADS
+  echo "Running with $CORES core(s) from $START to $END with $THREADS thread(s) in $MODE mode."
+  sbatch --exclusive --ntasks=1 --nodes=1 --cpus-per-task $CORES --job-name=$JOB_NAME -o $OUTPUT_FILE run.sh $START $END $MODE $THREADS
+  echo "Find output in ${OUTPUT_FILE}"
 done
