@@ -4,6 +4,7 @@ import java.util.Map;
 public class CollatzTask implements Runnable {
     private static final int CACHE_SIZE = 100000;
     private static final Map<Long, Integer> cache = new LinkedHashMap<>(CACHE_SIZE, 0.75f, true) {
+        @Override
         protected boolean removeEldestEntry(Map.Entry<Long, Integer> eldest) {
             return size() > CACHE_SIZE;
         }
@@ -52,8 +53,10 @@ public class CollatzTask implements Runnable {
 
     private int calculateCollatzLength(long n) {
         if (n == 1) return 1;
-        if (cache.containsKey(n)) return cache.get(n);
-
+        Integer cachedLength = cache.get(n);
+        if (cachedLength != null) {
+            return cachedLength;
+        }
         long next = n % 2 == 0 ? n / 2 : 3 * n + 1;
         int length = 1 + calculateCollatzLength(next);
 
