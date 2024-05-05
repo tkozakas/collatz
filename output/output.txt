@@ -1,0 +1,19 @@
+Operating in FAST mode.
+Testing with 1 threads.
+Calculation with 1 threads took: 693 ms
+
+Operating in FAST mode.
+Testing with 2 threads.
+Calculation with 2 threads took: 593 ms
+
+Operating in FAST mode.
+Testing with 4 threads.
+Calculation with 4 threads took: 448 ms
+
+Operating in FAST mode.
+Testing with 8 threads.
+Calculation with 8 threads took: 520 ms
+
+Operating in FAST mode.
+Testing with 16 threads.
+Calculation with 16 threads took: 701 ms
