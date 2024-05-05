@@ -1,17 +1,16 @@
 import java.util.LinkedHashMap;
 import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
 
 public class CollatzTask implements Runnable {
-    private final long startRange;
-    private final long endRange;
-    private final String mode;
     private static final int CACHE_SIZE = 100000;
-    private static final Map<Long, Integer> cache = new LinkedHashMap<Long, Integer>(CACHE_SIZE, 0.75f, true) {
+    private static final Map<Long, Integer> cache = new LinkedHashMap<>(CACHE_SIZE, 0.75f, true) {
         protected boolean removeEldestEntry(Map.Entry<Long, Integer> eldest) {
             return size() > CACHE_SIZE;
         }
     };
+    private final long startRange;
+    private final long endRange;
+    private final String mode;
 
     public CollatzTask(long startRange, long endRange, String mode) {
         this.startRange = startRange;
